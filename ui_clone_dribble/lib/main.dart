@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_clone_dribble/View/RadialStackWidget.dart';
+import 'package:ui_clone_dribble/View/Pages/recentTransactionsPage.dart';
+import 'package:ui_clone_dribble/View/TransactionPageWidgets.dart';
+import 'package:ui_clone_dribble/constants.dart';
 
 void main() {
   runApp(  MyApp());
@@ -13,13 +15,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
+      theme: ThemeData(appBarTheme: AppBarTheme(
+        elevation: 0,
+        backgroundColor: kBgColor),
     
         primarySwatch: Colors.blue,
       ),
       home:   Scaffold(
         backgroundColor: Colors.black,
-        body: CustomCircularWidget())
+        body: RecentTransactionPage())
     );
   }
 }
