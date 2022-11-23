@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_clone_dribble/View/Pages/HomePage.dart';
 import 'package:ui_clone_dribble/View/Pages/recentTransactionsPage.dart';
 import 'package:ui_clone_dribble/View/TransactionPageWidgets.dart';
 import 'package:ui_clone_dribble/constants.dart';
@@ -22,8 +23,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home:   Scaffold(
-        backgroundColor: Colors.black,
-        body: RecentTransactionPage())
+        backgroundColor: kBgColor,
+        body: HomePage())
     );
   }
 }

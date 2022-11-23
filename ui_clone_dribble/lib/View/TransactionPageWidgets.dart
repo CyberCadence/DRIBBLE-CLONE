@@ -231,18 +231,26 @@ final FontWeight fontWeight;
 ///customcard
 class CustomCard extends StatelessWidget {
 
-    CustomCard({super.key,required this.icon,required this.subtitleText,required this.titleText,required this.trailingText});
+    CustomCard({   this.iconborderColor=kButtongreylightColor, this.iconColor=Colors.black, super.key,required this.icon,required this.subtitleText,required this.titleText,required this.trailingText});
 final IconData icon;
 final String titleText;
 final String subtitleText;
 final String trailingText;
+final Color iconColor;
+final Color iconborderColor;
+
   @override
   Widget build(BuildContext context) {
     return Container(decoration: BoxDecoration(
       
-      borderRadius: BorderRadius.circular(30),color: Colors.white),
+      borderRadius: BorderRadius.circular(30),
+      
+      color: Colors.white),
       padding: const EdgeInsets.all(5),
-      child:   ListTile(leading: Icon(icon,color: kTitleColor,),
+      child:   ListTile(leading: Container(
+        padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(  color: kButtongreylightColor,borderRadius: BorderRadius.circular(15)),
+        child: Icon(icon,color: iconColor,)),
       
       title: 
       CustomTitleTextWIdget(textSize: 18,fontWeight: FontWeight.w900,
