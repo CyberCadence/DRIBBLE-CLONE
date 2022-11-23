@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/rendering.dart';
 
 const kBgColor=Color(0xFFf1f5fe);
 const kTitleColor=Color(0xff6c7498);
-const kButtonBgColor=Color(0xff565e94);
+const kButtonBgColor=Color.fromARGB(171, 33, 54, 192);
 const kButtongreylightColor=Color.fromARGB(255, 227, 239, 255);
 const kButtongreydarkColor=Color.fromARGB(255, 205, 226, 255);
 

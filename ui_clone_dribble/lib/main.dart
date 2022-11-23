@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_clone_dribble/View/Pages/HomePage.dart';
+import 'package:ui_clone_dribble/View/Pages/LoginPage.dart';
 import 'package:ui_clone_dribble/View/Pages/recentTransactionsPage.dart';
 import 'package:ui_clone_dribble/View/TransactionPageWidgets.dart';
 import 'package:ui_clone_dribble/constants.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       ),
       home:   Scaffold(
         backgroundColor: kBgColor,
-        body: HomePage())
+        body: LoginPage())
     );
   }
 }
