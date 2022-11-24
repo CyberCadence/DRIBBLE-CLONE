@@ -1,21 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:ui_clone_dribble/View/Pages/BottomNavigationbar.dart';
+import 'package:ui_clone_dribble/View/Pages/LoginPage.dart';
+import 'package:ui_clone_dribble/View/Pages/recentTransactionsPage.dart';
 import 'package:ui_clone_dribble/View/TransactionPageWidgets.dart';
 import 'package:ui_clone_dribble/constants.dart';
 
 
-final widgets=[TopContainer(),CenterWidget(),CustomCardList()];
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+    HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(30),
-        child: ListView.separated(itemBuilder: (context, index) => widgets[index],itemCount: widgets.length,separatorBuilder: (context, index) => kheight20,
-         
-        ));
+    return 
+     Scaffold(
+        body: Padding(
+            padding: const EdgeInsets.all(30),
+            child: ListView.separated(itemBuilder: (context, index) => widgets[index],
+            itemCount: widgets.length,separatorBuilder: (context, index) => kheight20,
+             
+            )),
+    bottomNavigationBar: BottomNAvigation(),  );
+    
   }
+final widgets=[TopContainer(),CenterWidget(),CustomCardList()];
+
+
 }
 
 
@@ -35,7 +57,7 @@ class TopContainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [BoxShadow(blurStyle: BlurStyle.outer)],
+          boxShadow: const[BoxShadow(blurStyle: BlurStyle.outer)],
           borderRadius: BorderRadius.circular(20)),
       height: size.height * .43,
       width: size.width,
@@ -44,10 +66,12 @@ class TopContainer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(
-              children: const [
-                Icon(Icons.line_axis),
-                Spacer(),
-                Icon(Icons.more_vert_outlined)
+              children:   [
+                IconButton(icon: const Icon(Icons.arrow_back),onPressed:()=>
+                Navigator.pop(context) ),
+                const Spacer(),
+                IconButton(icon: const Icon(Icons.arrow_right_alt),onPressed:()=>
+                Navigator.push(context, MaterialPageRoute(builder: (context) => RecentTransactionPage(),)) )
               ],
             ),
           ),

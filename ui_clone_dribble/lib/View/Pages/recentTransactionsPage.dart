@@ -15,10 +15,10 @@ class RecentTransactionPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: kBgColor,
+     
       appBar: AppBar(
         leading:
-            IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back,color: Colors.black,)),
+            IconButton(onPressed: () {Navigator.pop(context);}, icon: const Icon(Icons.arrow_back,color: Colors.black,)),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search,color: Colors.black))],
       ),
       body: SafeArea(
@@ -33,7 +33,7 @@ class RecentTransactionPage extends StatelessWidget {
              Text('See all',style: TextStyle(fontSize: 15),)],
             ),   kheight20,
               Row(
-                children: const [
+                children:   [
                   CustomButton(
                       text: 'All',
                       textcolor: Colors.white,
@@ -54,7 +54,7 @@ class RecentTransactionPage extends StatelessWidget {
           subtitleText: 'Payment from Andrea',trailingText: '30.00',), kheight20
             ,CircleWidget(size: size) ,const SizedBox(height: 40,),  
              SizedBox(width: double.maxFinite,height: size.height*.06,
-              child: const CustomButton(textcolor: Colors.white, color: kButtonBgColor,
+              child:   CustomButton(textcolor: Colors.white, color: kButtonBgColor,
                text: 'See details'),
             )],
           ),
@@ -67,3 +67,21 @@ class RecentTransactionPage extends StatelessWidget {
 
 //circlewidget middle area widget
 
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text('profilepage under construction'),);
+  }
+}
+
+
+class WalletPage extends StatelessWidget {
+  const WalletPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text('walletpage under construction'),);
+  }
+}

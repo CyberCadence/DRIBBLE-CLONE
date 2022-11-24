@@ -1,4 +1,5 @@
  import 'package:flutter/material.dart';
+import 'package:ui_clone_dribble/View/Pages/HomePage.dart';
 
 import '../constants.dart';
 
@@ -166,7 +167,7 @@ class CircleWidget extends StatelessWidget {
 }
 //custombutton
 class CustomButton extends StatelessWidget {
-  const CustomButton(
+    CustomButton(
       {required this.textcolor,
       required this.color,
       super.key,
@@ -174,7 +175,6 @@ class CustomButton extends StatelessWidget {
   final String text;
   final Color color;
   final Color textcolor;
-
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -190,7 +190,7 @@ class CustomButton extends StatelessWidget {
             text,
             style: TextStyle(color: textcolor, fontWeight: FontWeight.w800),
           )),
-      onPressed: () {},
+      onPressed: () { },
     );
   }
 }
